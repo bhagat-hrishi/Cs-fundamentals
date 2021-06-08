@@ -1,6 +1,6 @@
 # Cs Fundamentals
 
-This repo contain some notes for cs fundamentals .
+This repo contains some notes for cs fundamentals.
 
 ## OS
 
@@ -13,12 +13,13 @@ This repo contain some notes for cs fundamentals .
 
 ## DBMS
 
-- [Mongodb cheetsheet traversymedia](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
+- [Sql Interview Questions Interviewbit](https://www.interviewbit.com/sql-interview-questions/)
 - [Ridhi Dutta DB doc](https://docs.google.com/document/d/1KZ5mxEwyWjnHyh7ZG8IJtalDpqf-zvRIUC0BS5mpZ-o/edit)
+- [Mongodb cheetsheet traversymedia](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
 
 
 ## CN 
 - [networking networkchunk](https://www.youtube.com/playlist?list=PLIhvC56v63IJVXv0GJcl9vO5Z6znCVb1P)
 - [Each layer of the OSI model and TCP/IP explained.](https://www.youtube.com/watch?v=kCuyS7ihr_E&ab_channel=danscourses)
-
+- [Interview questions interviewbit](https://www.interviewbit.com/networking-interview-questions/)
 
