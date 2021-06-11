@@ -32,3 +32,7 @@ This repo contains some notes for cs fundamentals.
 - [PPT from youtube](https://drive.google.com/file/d/1i1KT_mE-pfsasubSGWZST91XLDGwEfMU/view)
 - [Interview questions interviewbit](https://www.interviewbit.com/networking-interview-questions/)
 
+## Leetcode Post 
+- [Binary Search](https://leetcode.com/problems/binary-search/discuss/423162/Binary-Search-101)
+- [Important and Useful links from all over the LeetCode](https://leetcode.com/discuss/general-discussion/665604/Important-and-Useful-links-from-all-over-the-Leetcode)
+
