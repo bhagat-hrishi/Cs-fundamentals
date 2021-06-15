@@ -21,9 +21,11 @@ This repo contains some notes for cs fundamentals.
 
 ## DBMS
 
-- [Sql Interview Questions Interviewbit](https://www.interviewbit.com/sql-interview-questions/)
-- [Ridhi Dutta DB doc](https://docs.google.com/document/d/1KZ5mxEwyWjnHyh7ZG8IJtalDpqf-zvRIUC0BS5mpZ-o/edit)
-- [Mongodb cheetsheet traversymedia](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
+
+- SQL
+  - Must read operators 
+    - [like](https://www.w3schools.com/sql/sql_like.asp)
+
 
 
 ## CN 
