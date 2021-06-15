@@ -28,8 +28,17 @@
 ### Select basic
 1.
 ```
+SELECT population FROM world WHERE name = 'Germany';
 ```
 2.
+```
+SELECT name, population FROM world WHERE name IN ( 'Sweden', 'Norway','Denmark');
+```
+3.
+```
+SELECT name, area FROM world WHERE area BETWEEN 200000 AND 250000
+```
+
 
 ### Select name
 1.
@@ -92,36 +101,6 @@ select capital,name from world where capital like concat('%',name,'%')
 ```
 SELECT capital,name FROM world WHERE capital LIKE concat('%', name, '%') AND capital > name;
 ```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
-1.
-```
-```
 ### Select from world
 1.
 ```
@@ -171,6 +150,70 @@ select name,population,area from world where area > 3000000 xor population > 250
 ```
 ```
 ### Select from nobel
+1
+```
+SELECT yr, subject, winner FROM nobel  WHERE yr = 1950
+```
+2
+```
+SELECT winner FROM nobel  WHERE yr = 1962 AND subject = 'Literature'
+```
+3
+```
+select yr,subject from nobel where winner ='Albert Einstein' 
+```
+4
+```
+select winner from nobel where yr>=2000 and subject='Peace'
+```
+5
+```
+select * from nobel where subject='Literature' and yr>=1980 and yr<=1989;
+```
+6
+```
+SELECT * FROM nobel WHERE  winner IN ('Theodore Roosevelt',
+                                       'Woodrow Wilson',
+                                        'Jimmy Carter',
+                                        'Barack Obama'
+                                      )
+```
+7
+```
+select winner from nobel where winner like 'John%'
+```
+8
+```
+select yr,subject,winner from nobel  where yr=1980 and subject='Physics'                      
+                                                      or 
+                                          yr=1984  and  subject='Chemistry'
+```
+9
+```
+select yr,subject,winner from nobel where yr=1980 and  subject NOT IN('Chemistry','Medicine')
+```
+10
+```
+select yr, subject,winner from nobel where subject='Medicine' and yr<1910
+                                                     or 
+                                           subject='Literature' and yr>=2004
+```
+#### Harder Questions
+11
+```
+select * from nobel where winner = 'PETER GRÜNBERG'
+```
+12 
+```
+select * from nobel where winner = 'EUGENE O''NEILL'
+```
+13
+```
+select winner , yr , subject from nobel where winner like 'Sir%' order by yr desc,winner
+```
+14
+```
+```
 ### Select from select
 ### Sum and count 
 1.
@@ -208,12 +251,35 @@ select continent from world group by continent having sum(population)>100000000
 
 
 ### Join
+
 ### More join
 ### Using NULL
 ### Numeric example 
 ### Window function
 ### Self join 
 ### Covid 19
+1.
+```
+SELECT name, DAY(whn),
+ confirmed, deaths, recovered
+ FROM covid
+WHERE name = 'Spain'
+AND MONTH(whn) = 3
+ORDER BY whn
+```
+2.
+```
+
+```
+3.
+```
+```
+4.
+```
+```
+5.
+```
+```
 ### Quiz   
 
 
