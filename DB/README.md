@@ -9,32 +9,20 @@
 - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections 
+
 - [Select basic](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-basic)
-
 - [Select name](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-name)
-
 - [Select from world](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-world)
-
 - [Select from nobel](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-nobel)
-
 - [Select with select](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-select)
-
 - [sum and count](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#sum-and-count)
-
 - [Join](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#join)
-
 - [More Join](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#more-join)
-
 - [Using NULL](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#using-null)
-
 - [Numeric example](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#numeric-example)
-
 - [Window function](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#numeric-example)
-
 - [Covid 19](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#covid-19)
-
 - [Self Join](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#self-join)
-
 - [Quiz](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#quiz)
 
 ### Select basic
