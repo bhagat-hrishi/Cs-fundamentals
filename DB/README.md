@@ -14,7 +14,7 @@
 - [Select name](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-name)
 - [Select from world](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-world)
 - [Select from nobel](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-nobel)
-- [Select with select](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-select)
+- [Select within select](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#select-from-select)
 - [sum and count](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#sum-and-count)
 - [Join](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#join)
 - [More Join](https://github.com/bhagat-hrishi/Cs-fundamentals/tree/main/DB#more-join)
@@ -214,7 +214,44 @@ select winner , yr , subject from nobel where winner like 'Sir%' order by yr des
 14
 ```
 ```
-### Select from select
+### Select within select
+1. 
+```
+SELECT name FROM world
+  WHERE population >
+     (SELECT population FROM world
+      WHERE name='Russia')
+```
+2. 
+```
+select name from world where continent='Europe' 
+                                   and 
+                            gdp/population > (Select gdp/population from world where name = 'United Kingdom')
+
+```
+3. 
+```
+select name , continent from world 
+    where continent in (Select continent from world where name in ('Argentina','Australia')) 
+    order by name;
+```
+4. 
+```
+select name , population from world 
+                    where population > (select population  from world where name='Canada') and 
+                    population <  (select population from world where name ='Poland')
+```
+1. 
+```
+```
+1. 
+```
+```
+1. 
+```
+```
+
+
 ### Sum and count 
 1.
 ```
