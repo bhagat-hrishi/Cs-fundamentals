@@ -20,3 +20,7 @@
 
 > Stackoverflow
 - [Threads: Why must all user threads be mapped to a kernel thread?](https://stackoverflow.com/questions/14791278/threads-why-must-all-user-threads-be-mapped-to-a-kernel-thread)
+
+> Extra
+- [How web browsers use Process & Threads](https://supuniuthpalameegahapola.medium.com/how-web-browsers-use-process-threads-695a6f42e9a8)
+- 
