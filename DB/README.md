@@ -2,6 +2,7 @@
 
 - [Sql Interview Questions Interviewbit](https://www.interviewbit.com/sql-interview-questions/)
 - [Ridhi Dutta DB doc](https://docs.google.com/document/d/1KZ5mxEwyWjnHyh7ZG8IJtalDpqf-zvRIUC0BS5mpZ-o/edit)
+- [Striver Core](https://docs.google.com/document/d/1sQlRDw6--HwyxeFL7b4kBsOG-Tz7rXMbpWNnfvJErA4/edit)
 - [Mongodb cheetsheet traversymedia](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
 
 ## SQLZOO Solutions 
