@@ -270,7 +270,16 @@ select name , population from world
 ```
 select name from world where gdp > ALL(select gdp from world where continent='Europe' and gdp>0);
 ```
-1. 
+7. 
+```
+```
+8. 
+```
+```
+9. 
+```
+```
+10. 
 ```
 ```
 
@@ -344,7 +353,7 @@ select mdate,teamname from game join eteam
 select player from game join goal on game.id=goal.matchid 
                                   where game.stadium='National Stadium, Warsaw';
 ```
-### More difficult queries
+#### More difficult queries
 8.
 ```
 select distinct player from game join goal on matchid=id
@@ -403,15 +412,29 @@ select name from actor where
 ```
 8
 ```
+select title from 
+      movie inner join casting on movie.id=casting.movieid 
+            inner join actor on actor.id=casting.actorid 
+                where actor.name= 'Harrison Ford'
 ```
 9
 ```
+select title from 
+                  movie inner join casting on movie.id=casting.movieid
+                        inner join actor on actor.id=casting.actorid 
+                         where actor.name ='Harrison Ford' and casting.ord <>1 
 ```
 10
 ```
+select title,name from 
+                  movie inner join casting on movie.id=casting.movieid
+                        inner join actor on actor.id=casting.actorid 
+                         where casting.ord = 1 and yr=1962
 ```
+#### Harder Questions
 11
 ```
+
 ```
 12
 ```
@@ -427,9 +450,86 @@ select name from actor where
 ```
 
 ### Using NULL
+1.
+```
+select name from teacher where dept is null;
+```
+2.
+```
+SELECT teacher.name, dept.name
+ FROM teacher INNER JOIN dept
+           ON (teacher.dept=dept.id)
+```
+3.
+```
+-- both are valid
+select teacher.name , dept.name 
+              from teacher left join dept on (teacher.dept=dept.id);
+-- 
+select teacher.name , dept.name 
+              from teacher left outer join dept on (teacher.dept=dept.id);
+
+```
+4.
+```
+select teacher.name , dept.name 
+              from teacher right join dept on (teacher.dept=dept.id);
+
+```
+5.
+```
+```
+6.
+```
+```
+7.
+```
+```
+8.
+```
+```
+9.
+```
+```
+10.
+```
+```
+
 ### Numeric example 
 ### Window function
 ### Self join 
+1.
+```
+select count(*) from stops;
+```
+2.
+```
+select id from stops where name='Craiglockhart'
+```
+3.
+```
+```
+4.
+```
+```
+5.
+```
+```
+6.
+```
+```
+7.
+```
+```
+8.
+```
+```
+9.
+```
+```
+10.
+```
+```
 ### Covid 19
 1.
 ```
