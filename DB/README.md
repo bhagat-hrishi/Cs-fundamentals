@@ -5,6 +5,10 @@
 - [Striver Core](https://docs.google.com/document/d/1sQlRDw6--HwyxeFL7b4kBsOG-Tz7rXMbpWNnfvJErA4/edit)
 - [Mongodb cheetsheet traversymedia](https://gist.github.com/bradtraversy/f407d642bdc3b31681bc7e56d95485b6)
 
+- Joins 
+  -[Difference between natural join and ineer join](https://www.geeksforgeeks.org/difference-between-natural-join-and-inner-join-in-sql/)
+
+
 ## SQLZOO Solutions 
 
 - [SQLZOO](https://sqlzoo.net/wiki/SQL_Tutorial)
@@ -102,6 +106,10 @@ select capital,name from world where capital like concat('%',name,'%')
 ```
 SELECT capital,name FROM world WHERE capital LIKE concat('%', name, '%') AND capital > name;
 ```
+15.
+```
+SELECT name, REPLACE(capital, name, '') FROM world WHERE capital LIKE concat('%', name, '%') AND capital > name;
+```
 ### Select from world
 1.
 ```
@@ -137,18 +145,31 @@ select name,population,area from world where area > 3000000 xor population > 250
 ```
 9.
 ```
+select name,round(population/1000000,2),round(gdp/1000000000,2) from world  where continent='South America';
 ```
 10.
 ```
+select name,round (gdp/population ,  -3) from world where gdp>1000000000000;
 ```
 11.
 ```
+select name , capital from world where length(name)=length(capital);
 ```
 12.
 ```
+select name , capital from world where left(name,1)=left(capital,1) and name <>capital;
 ```
 13.
 ```
+select name from world where 
+  name like '%a%'  and 
+  name like '%e%'  and 
+  name like '%i%'  and 
+  name like '%o%'  and 
+  name like '%u%' and 
+  name not like '% %';
+  -- observe spce  in express in last not like 
+
 ```
 ### Select from nobel
 1
@@ -242,11 +263,12 @@ select name , population from world
                     where population > (select population  from world where name='Canada') and 
                     population <  (select population from world where name ='Poland')
 ```
-1. 
+5. 
 ```
 ```
-1. 
+6. 
 ```
+select name from world where gdp > ALL(select gdp from world where continent='Europe' and gdp>0);
 ```
 1. 
 ```
@@ -289,8 +311,121 @@ select continent from world group by continent having sum(population)>100000000
 
 
 ### Join
+1.
+```
+select matchid,player from goal where teamid='GER'
+```
+2.
+```
+select id,stadium ,team1,team2 from game where id=1012;
+```
+3.
+```
+SELECT player,teamid,stadium,mdate
+  FROM game JOIN goal ON (id=matchid) and teamid='GER'
+```
+4.
+```
+select team1,team2,player from goal join game on (game.id=goal.matchid) and player like 'Mario%'
+```
+5.
+```
+SELECT player, teamid, coach, gtime
+  FROM goal join eteam on goal.teamid=eteam.id
+ WHERE gtime<=10
+```
+6.
+```
+select mdate,teamname from game join eteam
+                         where game.team1=eteam.id and coach='Fernando Santos'
+```
+7.
+```
+select player from game join goal on game.id=goal.matchid 
+                                  where game.stadium='National Stadium, Warsaw';
+```
+### More difficult queries
+8.
+```
+select distinct player from game join goal on matchid=id
+                          where (team1='GER' or team2='GER')  and goal.teamid!='GER' 
+```
+9.
+```
+select teamname,count(player) from goal join eteam on teamid=id group by teamname;
+```
+10.
+```
+select stadium , count(*) from game join goal on game.id=goal.matchid group by stadium;
+```
+11.
+```
+```
+12.
+```
+```
+13.
+```
+```
+
 
 ### More join
+1
+```
+SELECT id, title
+ FROM movie
+ WHERE yr=1962
+```
+2
+```
+select yr from movie where title='Citizen Kane'
+```
+3
+```
+select id,title,yr from movie where title like '%Star Trek%' order by yr;
+```
+4
+```
+select id from actor where name ='Glenn Close';
+```
+5
+```
+select id from movie where title ='Casablanca';
+```
+6
+```
+select name from actor join casting on id=actorid where movieid=11768
+```
+7
+```
+select name from actor where 
+        id in (select actorid from movie join casting on id=movieid and title='Alien')
+```
+8
+```
+```
+9
+```
+```
+10
+```
+```
+11
+```
+```
+12
+```
+```
+13
+```
+```
+14
+```
+```
+15
+```
+```
+
 ### Using NULL
 ### Numeric example 
 ### Window function
